@@ -1,0 +1,35 @@
+
+
+mat-toolbar {
+    height: 48px;
+}
+
+.brand {
+    cursor: pointer;
+    font-family: 'Royal';
+}
+
+.button {
+    margin-left: 15px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;
+    margin-left: 15px;
+    font-size: 48px;
+    cursor: pointer;
+    color: white;
+    line-height: 48px;
+}
+
+@media only screen and (max-width: 600px) {
+    .burger {
+        display: block;
+    }
+
+    .button {
+        display: none;
+    }
+}

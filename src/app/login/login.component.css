@@ -1,0 +1,35 @@
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel * {
+    width: 90%;
+    margin: 0 auto;
+}
+
+mat-toolbar {
+    text-align: center;
+}
+
+a.mat-button {
+    margin-top: 40px;
+}
+
+.spacer {
+    height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}

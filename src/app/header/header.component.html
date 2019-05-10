@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <div class="brand" routerLink="/codexlist">CodexEditor</div>
+  <div style="flex: 1 1 auto"></div>
+  <div class="button" routerLink="login" *ngIf="!auth.isUserAuthenticated">Bejelentkezés</div>
+  <div class="button" routerLink="registration" *ngIf="!auth.isUserAuthenticated">Regisztráció</div>
+  <div class="button" routerLink="/codexlist" *ngIf="auth.isUserAuthenticated">Kódexek listázása</div>
+  <div class="button" routerLink="addcodex" *ngIf="auth.isUserAuthenticated">Kódex hozzáadása</div>
+  <div class="button" (click)="logout()" *ngIf="auth.isUserAuthenticated">Kijelentkezés</div>
+  <button mat-button [matMenuTriggerFor]="menu" class="burger">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="login" *ngIf="!auth.isUserAuthenticated">Bejelentkezés</button>
+    <button mat-menu-item routerLink="registration" *ngIf="!auth.isUserAuthenticated">Regisztráció</button>
+    <button mat-menu-item routerLink="/codexlist" *ngIf="auth.isUserAuthenticated">Kódexek listázása</button>
+    <button mat-menu-item routerLink="addcodex" *ngIf="auth.isUserAuthenticated">Kódex hozzáadása</button>
+    <button mat-menu-item (click)="logout()" *ngIf="auth.isUserAuthenticated">Kijelentkezés</button>
+  </mat-menu>
+</mat-toolbar>

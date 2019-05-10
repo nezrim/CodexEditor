@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="header">Kódex hozzáadása</div>
+  <div class="panel">
+      <mat-form-field>
+          <input matInput  placeholder="Cím" [(ngModel)]="title">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Szerző" [(ngModel)]="author">
+      </mat-form-field>
+      <mat-form-field>
+          <textarea matInput placeholder="Szöveg" [(ngModel)]="content"></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="addCodex()" >Kódex hozzáadása!</button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+
+.container {
+    background-color: #fafafa;
+    color: black;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    font-size: 40px;
+}
+
+.panel {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.panel * {
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{codex.data.title}}</mat-card-title>
+      <mat-card-subtitle>by {{codex.data.author}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/book.png" alt="Photo of a Shiba Inu">
+    <mat-card-actions>
+        <button mat-button (click)="toDetails()"><mat-icon>remove_red_eye</mat-icon></button>
+        <button mat-button (click)="delete()" color="accent"><mat-icon>delete</mat-icon></button>
+        <button mat-button (click)="toJSON()" >JSON</button>
+        <a mat-button [href]="downloadJsonHref" download="{{codex.data.author}} - {{codex.data.title}}.json"><mat-icon>arrow_downward</mat-icon></a>
+    </mat-card-actions>
+  </mat-card>
